@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @critical.result_id %>
+</p>
+
+<p>
+  <strong>Karuta:</strong>
+  <%= @critical.karuta_id %>
+</p>
+
+<p>
+  <strong>Field:</strong>
+  <%= @critical.field_id %>
+</p>
+
+<%= link_to 'Edit', edit_critical_path(@critical) %> |
+<%= link_to 'Back', criticals_path %>

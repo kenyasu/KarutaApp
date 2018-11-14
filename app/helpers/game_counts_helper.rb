@@ -1,0 +1,2 @@
+module GameCountsHelper
+end

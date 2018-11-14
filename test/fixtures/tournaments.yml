@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  host: MyString
+  date: 2018-11-13
+  place: MyString
+  class: MyString
+  entryFee: MyString
+  applicationPeriod: 2018-11-13
+  capacity: MyString
+  access: MyString
+
+two:
+  name: MyString
+  host: MyString
+  date: 2018-11-13
+  place: MyString
+  class: MyString
+  entryFee: MyString
+  applicationPeriod: 2018-11-13
+  capacity: MyString
+  access: MyString

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Criticals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Result</th>
+      <th>Karuta</th>
+      <th>Field</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @criticals.each do |critical| %>
+      <tr>
+        <td><%= critical.result_id %></td>
+        <td><%= critical.karuta_id %></td>
+        <td><%= critical.field_id %></td>
+        <td><%= link_to 'Show', critical %></td>
+        <td><%= link_to 'Edit', edit_critical_path(critical) %></td>
+        <td><%= link_to 'Destroy', critical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Critical', new_critical_path %>

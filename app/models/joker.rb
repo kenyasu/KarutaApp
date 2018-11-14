@@ -1,0 +1,2 @@
+class Joker < ApplicationRecord
+end

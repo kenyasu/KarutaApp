@@ -1,0 +1,2 @@
+module AvoidancesHelper
+end

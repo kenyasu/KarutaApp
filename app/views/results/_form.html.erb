@@ -1,0 +1,82 @@
+<%= form_with(model: result, local: true) do |form| %>
+  <% if result.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(result.errors.count, "error") %> prohibited this result from being saved:</h2>
+
+      <ul>
+      <% result.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gameType_id %>
+    <%= form.number_field :gameType_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gameCount_id %>
+    <%= form.number_field :gameCount_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :opponent_id %>
+    <%= form.number_field :opponent_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cardDifference %>
+    <%= form.number_field :cardDifference %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :discussionOpp %>
+    <%= form.number_field :discussionOpp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :discussionSelf %>
+    <%= form.number_field :discussionSelf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :critical_id %>
+    <%= form.number_field :critical_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avoidance_id %>
+    <%= form.number_field :avoidance_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :otetsuki_id %>
+    <%= form.number_field :otetsuki_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :joker_id %>
+    <%= form.number_field :joker_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

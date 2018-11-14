@@ -1,0 +1,2 @@
+class Avoidance < ApplicationRecord
+end

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Karuta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Waka</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @karuta.each do |karutum| %>
+      <tr>
+        <td><%= karutum.waka %></td>
+        <td><%= link_to 'Show', karutum %></td>
+        <td><%= link_to 'Edit', edit_karutum_path(karutum) %></td>
+        <td><%= link_to 'Destroy', karutum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Karutum', new_karutum_path %>

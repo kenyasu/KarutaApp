@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @otetsuki.result_id %>
+</p>
+
+<p>
+  <strong>Karuta:</strong>
+  <%= @otetsuki.karuta_id %>
+</p>
+
+<p>
+  <strong>Field:</strong>
+  <%= @otetsuki.field_id %>
+</p>
+
+<%= link_to 'Edit', edit_otetsuki_path(@otetsuki) %> |
+<%= link_to 'Back', otetsukis_path %>

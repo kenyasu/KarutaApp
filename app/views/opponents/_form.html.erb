@@ -1,0 +1,57 @@
+<%= form_with(model: opponent, local: true) do |form| %>
+  <% if opponent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(opponent.errors.count, "error") %> prohibited this opponent from being saved:</h2>
+
+      <ul>
+      <% opponent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender_id %>
+    <%= form.text_field :gender_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :integer %>
+    <%= form.text_field :integer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grade_id %>
+    <%= form.number_field :grade_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hand_id %>
+    <%= form.number_field :hand_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :belongs %>
+    <%= form.text_field :belongs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :style_id %>
+    <%= form.number_field :style_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Gametype</th>
+      <th>Gamecount</th>
+      <th>Opponent</th>
+      <th>Carddifference</th>
+      <th>Comment</th>
+      <th>Discussionopp</th>
+      <th>Discussionself</th>
+      <th>User</th>
+      <th>Critical</th>
+      <th>Avoidance</th>
+      <th>Otetsuki</th>
+      <th>Joker</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @results.each do |result| %>
+      <tr>
+        <td><%= result.date %></td>
+        <td><%= result.gameType_id %></td>
+        <td><%= result.gameCount_id %></td>
+        <td><%= result.opponent_id %></td>
+        <td><%= result.cardDifference %></td>
+        <td><%= result.comment %></td>
+        <td><%= result.discussionOpp %></td>
+        <td><%= result.discussionSelf %></td>
+        <td><%= result.user_id %></td>
+        <td><%= result.critical_id %></td>
+        <td><%= result.avoidance_id %></td>
+        <td><%= result.otetsuki_id %></td>
+        <td><%= result.joker_id %></td>
+        <td><%= link_to 'Show', result %></td>
+        <td><%= link_to 'Edit', edit_result_path(result) %></td>
+        <td><%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Result', new_result_path %>

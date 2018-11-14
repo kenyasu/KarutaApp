@@ -1,0 +1,2 @@
+class Critical < ApplicationRecord
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @avoidance.result_id %>
+</p>
+
+<p>
+  <strong>Karuta:</strong>
+  <%= @avoidance.karuta_id %>
+</p>
+
+<%= link_to 'Edit', edit_avoidance_path(@avoidance) %> |
+<%= link_to 'Back', avoidances_path %>

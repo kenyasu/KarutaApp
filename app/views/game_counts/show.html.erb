@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @game_count.name %>
+</p>
+
+<%= link_to 'Edit', edit_game_count_path(@game_count) %> |
+<%= link_to 'Back', game_counts_path %>

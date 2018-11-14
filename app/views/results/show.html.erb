@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @result.date %>
+</p>
+
+<p>
+  <strong>Gametype:</strong>
+  <%= @result.gameType_id %>
+</p>
+
+<p>
+  <strong>Gamecount:</strong>
+  <%= @result.gameCount_id %>
+</p>
+
+<p>
+  <strong>Opponent:</strong>
+  <%= @result.opponent_id %>
+</p>
+
+<p>
+  <strong>Carddifference:</strong>
+  <%= @result.cardDifference %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @result.comment %>
+</p>
+
+<p>
+  <strong>Discussionopp:</strong>
+  <%= @result.discussionOpp %>
+</p>
+
+<p>
+  <strong>Discussionself:</strong>
+  <%= @result.discussionSelf %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @result.user_id %>
+</p>
+
+<p>
+  <strong>Critical:</strong>
+  <%= @result.critical_id %>
+</p>
+
+<p>
+  <strong>Avoidance:</strong>
+  <%= @result.avoidance_id %>
+</p>
+
+<p>
+  <strong>Otetsuki:</strong>
+  <%= @result.otetsuki_id %>
+</p>
+
+<p>
+  <strong>Joker:</strong>
+  <%= @result.joker_id %>
+</p>
+
+<%= link_to 'Edit', edit_result_path(@result) %> |
+<%= link_to 'Back', results_path %>

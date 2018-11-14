@@ -1,0 +1,2 @@
+class ScheduleTournament < ApplicationRecord
+end

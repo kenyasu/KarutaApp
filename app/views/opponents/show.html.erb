@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @opponent.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @opponent.gender_id %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @opponent.integer %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @opponent.grade_id %>
+</p>
+
+<p>
+  <strong>Hand:</strong>
+  <%= @opponent.hand_id %>
+</p>
+
+<p>
+  <strong>Belongs:</strong>
+  <%= @opponent.belongs %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @opponent.style_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @opponent.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_opponent_path(@opponent) %> |
+<%= link_to 'Back', opponents_path %>

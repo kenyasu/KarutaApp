@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Otetsukis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Result</th>
+      <th>Karuta</th>
+      <th>Field</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @otetsukis.each do |otetsuki| %>
+      <tr>
+        <td><%= otetsuki.result_id %></td>
+        <td><%= otetsuki.karuta_id %></td>
+        <td><%= otetsuki.field_id %></td>
+        <td><%= link_to 'Show', otetsuki %></td>
+        <td><%= link_to 'Edit', edit_otetsuki_path(otetsuki) %></td>
+        <td><%= link_to 'Destroy', otetsuki, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Otetsuki', new_otetsuki_path %>

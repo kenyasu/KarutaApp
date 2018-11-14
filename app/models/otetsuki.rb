@@ -1,0 +1,2 @@
+class Otetsuki < ApplicationRecord
+end

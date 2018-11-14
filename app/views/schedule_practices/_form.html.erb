@@ -1,0 +1,42 @@
+<%= form_with(model: schedule_practice, local: true) do |form| %>
+  <% if schedule_practice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(schedule_practice.errors.count, "error") %> prohibited this schedule_practice from being saved:</h2>
+
+      <ul>
+      <% schedule_practice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.time_select :time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :place %>
+    <%= form.text_field :place %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.text_field :note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

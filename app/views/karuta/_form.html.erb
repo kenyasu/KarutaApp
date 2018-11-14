@@ -1,0 +1,22 @@
+<%= form_with(model: karutum, local: true) do |form| %>
+  <% if karutum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(karutum.errors.count, "error") %> prohibited this karutum from being saved:</h2>
+
+      <ul>
+      <% karutum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :waka %>
+    <%= form.text_field :waka %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

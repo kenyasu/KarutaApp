@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @joker.result_id %>
+</p>
+
+<p>
+  <strong>Karuta:</strong>
+  <%= @joker.karuta_id %>
+</p>
+
+<%= link_to 'Edit', edit_joker_path(@joker) %> |
+<%= link_to 'Back', jokers_path %>
