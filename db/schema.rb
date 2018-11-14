@@ -10,7 +10,122 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_11_180633) do
+ActiveRecord::Schema.define(version: 2018_11_12_164659) do
+
+  create_table "age_classes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "areas", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "avoidances", force: :cascade do |t|
+    t.integer "result_id"
+    t.integer "karuta_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "criticals", force: :cascade do |t|
+    t.integer "result_id"
+    t.integer "karuta_id"
+    t.integer "field_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fields", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "game_counts", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "game_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genders", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "grades", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hands", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "jokers", force: :cascade do |t|
+    t.integer "result_id"
+    t.integer "karuta_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "karuta", force: :cascade do |t|
+    t.string "waka"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "opponents", force: :cascade do |t|
+    t.string "name"
+    t.string "gender_id"
+    t.string "integer"
+    t.integer "grade_id"
+    t.integer "hand_id"
+    t.string "belongs"
+    t.integer "style_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "otetsukis", force: :cascade do |t|
+    t.integer "result_id"
+    t.integer "karuta_id"
+    t.integer "field_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.date "date"
+    t.integer "gameType_id"
+    t.integer "gameCount_id"
+    t.integer "opponent_id"
+    t.integer "cardDifference"
+    t.text "comment"
+    t.integer "discussionOpp"
+    t.integer "discussionSelf"
+    t.integer "user_id"
+    t.integer "critical_id"
+    t.integer "avoidance_id"
+    t.integer "otetsuki_id"
+    t.integer "joker_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "schedule_practices", force: :cascade do |t|
     t.date "date"
@@ -18,6 +133,33 @@ ActiveRecord::Schema.define(version: 2018_11_11_180633) do
     t.string "place"
     t.string "note"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schedule_tournaments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "tournament_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "styles", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tournaments", force: :cascade do |t|
+    t.string "name"
+    t.string "host"
+    t.date "date"
+    t.string "place"
+    t.string "class"
+    t.string "entryFee"
+    t.date "applicationPeriod"
+    t.string "capacity"
+    t.string "access"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
