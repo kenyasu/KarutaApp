@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_12_164659) do
+ActiveRecord::Schema.define(version: 2018_11_24_155845) do
 
   create_table "age_classes", force: :cascade do |t|
     t.string "name"
@@ -128,8 +128,7 @@ ActiveRecord::Schema.define(version: 2018_11_12_164659) do
   end
 
   create_table "schedule_practices", force: :cascade do |t|
-    t.date "date"
-    t.time "time"
+    t.datetime "start_time"
     t.string "place"
     t.string "note"
     t.integer "user_id"
@@ -155,13 +154,16 @@ ActiveRecord::Schema.define(version: 2018_11_12_164659) do
     t.string "host"
     t.date "date"
     t.string "place"
-    t.string "class"
+    t.string "grade"
     t.string "entryFee"
     t.date "applicationPeriod"
     t.string "capacity"
-    t.string "access"
+    t.text "access"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "secondPlace"
+    t.text "others"
+    t.string "number"
   end
 
   create_table "users", force: :cascade do |t|

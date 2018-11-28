@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>第</strong>
+  <%= @tournament.number %>
+  <strong>回</strong>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @tournament.name %>
 </p>
@@ -21,8 +27,13 @@
 </p>
 
 <p>
-  <strong>Class:</strong>
-  <%= @tournament.class %>
+  <strong>Access:</strong>
+  <%= @tournament.secondPlace %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @tournament.grade %>
 </p>
 
 <p>
@@ -45,5 +56,11 @@
   <%= @tournament.access %>
 </p>
 
-<%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+<p>
+  <strong>その他:</strong>
+  <%= @tournament.others %>
+</p>
+
+<%= link_to 'Edit', edit_tournament_path(@tournament) %>
+<%= link_to '削除', tournament, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Back', tournaments_path %>

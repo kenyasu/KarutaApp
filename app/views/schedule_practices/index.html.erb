@@ -2,12 +2,14 @@
 
 <h1>Schedule Practices</h1>
 
-<%= month_calendar events: @schedule_practices do |date, meetings| %>
+<%= month_calendar events: @schedule_practices do |date, schedule_practices| %>
   <%= date %>
-
-  <% meetings.each do |meeting| %>
+  <% puts "-----------------------" %>
+  <% puts schedule_practices %>
+  <% puts "-----------------------" %>
+  <% schedule_practices.each do |schedule_practice| %>
     <div>
-      <%= meeting.name %>
+      <%= schedule_practice.place %>
     </div>
   <% end %>
 <% end %>
@@ -15,7 +17,6 @@
 <table>
   <thead>
     <tr>
-      <th>Date</th>
       <th>Time</th>
       <th>Place</th>
       <th>Note</th>
@@ -26,8 +27,7 @@
   <tbody>
     <% @schedule_practices.each do |schedule_practice| %>
       <tr>
-        <td><%= schedule_practice.date %></td>
-        <td><%= schedule_practice.time %></td>
+        <td><%= schedule_practice.start_time %></td>
         <td><%= schedule_practice.place %></td>
         <td><%= schedule_practice.note %></td>
         <td><%= schedule_practice.user_id %></td>

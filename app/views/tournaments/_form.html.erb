@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :number %>
+    <%= form.text_field :number %>
+  </div>
+
+  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
@@ -32,8 +37,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :class %>
-    <%= form.text_field :class %>
+    <%= form.label :secondPlace %>
+    <%= form.text_field :secondPlace %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grade %>
+    <%= form.text_field :grade %>
   </div>
 
   <div class="field">
@@ -54,6 +64,11 @@
   <div class="field">
     <%= form.label :access %>
     <%= form.text_field :access %>
+  </div>
+
+  <div class="field">
+    <%= form.label :others %>
+    <%= form.text_field :others %>
   </div>
 
   <div class="actions">

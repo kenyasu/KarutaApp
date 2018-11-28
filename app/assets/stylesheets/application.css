@@ -3,3 +3,30 @@
  *= require simple_calendar
  *= require_tree .
  */
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #E0EBC9;
+  margin: 0 auto;
+}
+
+header {
+  height: 4rem;
+  background-color: #C83737;
+}
+
+.header-link {  
+  color: #fff;
+  font-size: 1.3rem;
+}

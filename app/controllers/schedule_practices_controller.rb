@@ -69,6 +69,6 @@ class SchedulePracticesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def schedule_practice_params
-      params.require(:schedule_practice).permit(:date, :time, :place, :note, :user_id)
+      params.require(:schedule_practice).permit(:start_time, :place, :note, :user_id)
     end
 end
