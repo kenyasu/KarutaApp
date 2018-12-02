@@ -12,6 +12,15 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 li {
   list-style: none;
 }
@@ -19,14 +28,31 @@ li {
 body {
   background-color: #E0EBC9;
   margin: 0 auto;
+  font-size: 1.3rem;
 }
 
 header {
   height: 4rem;
+  width: 100%;
   background-color: #C83737;
 }
 
-.header-link {  
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .header-link {
   color: #fff;
   font-size: 1.3rem;
+  margin: 1rem;
+}
+
+header .header-disp {
+  height: 4rem;
+  line-height: 4rem;
+}
+
+header .header-list li {
+  display: inline-block;
 }

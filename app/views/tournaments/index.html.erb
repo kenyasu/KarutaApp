@@ -1,29 +1,121 @@
 <p id="notice"><%= notice %></p>
 
-<h1>大会予定・結果</h1>
-
-
-<table>
-  <tbody>
-    <% @tournaments.each do |tournament| %>
-    <tr>
-      <td>
-        <div class="container">
-          <div class="date-name">
-            <div class="date"><%= tournament.date.month %>/<%= tournament.date.day %></div>
-            <div class="name"><%= link_to tournament.name, tournament %></div>
-          </div>
-          <div class="grade"><%= tournament.grade %></div>
-          <div class="place"><%= tournament.place %></div>
+<div class="tournament-contents">
+  <div class="left-column column">
+    <div class="search">
+      <div class="refine-search">絞り込み検索</div>
+      <div class="search-grade">
+        <p>級</p>
+        <input type="text">
+      </div>
+      <div class="search-area">
+        <p>地域</p>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">東北</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">関東</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">中部</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">北陸</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">東海</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">関西</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">中国</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">四国</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">九州</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">沖縄・北海道</span>
+          </label>
         </div>
-      </td>
-      <td>結果</td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
-<br>
-
-<%= link_to '新規登録', new_tournament_path %>
+      </div>
+      <div class="search-keyword">
+        <p>キーワード検索</p>
+        <input type="text" placeholder="例：名人戦" class="search-box">
+      </div>
+      <div class="search-btn btn">検索</div>
+    </div>
+  </div>
+  <div class="tournament-list-main">
+    <div class="tournament-list-size">
+      <div class="tournament-new">
+        <%= link_to '新規登録', new_tournament_path %>
+      </div>
+      <div class="search-year">
+        <div class="pre"><</div>
+        <div class="year">2018</div>
+        <div class="pst">></div>
+      </div>
+      <div class="month-list">
+          <div class="month" id="1">1月</div>
+          <div class="month" id="2">2月</div>
+          <div class="month" id="3">3月</div>
+          <div class="month" id="4">4月</div>
+          <div class="month" id="5">5月</div>
+          <div class="month" id="6">6月</div>
+          <div class="month" id="7">7月</div>
+          <div class="month" id="8">8月</div>
+          <div class="month" id="9">9月</div>
+          <div class="month" id="10">10月</div>
+          <div class="month" id="11">11月</div>
+          <div class="month" id="12">12月</div>
+      </div>
+      <div class="containers">
+      <% @tournaments.each do |tournament| %>
+        <div class="container">
+          <div class="tournament-date">
+            <%= tournament.date.month %>/<%= tournament.date.day %>
+          </div>
+          <div class="tournament-name">
+            <%= link_to "第#{tournament.number}回#{tournament.name}", tournament, class: "tournament-link" %>
+          </div>
+          <div class="tournament-grades">級：
+            <span id="grade-id1">A</span>
+            <span id="grade-id2">B</span>
+            <span id="grade-id3">C</span>
+            <span id="grade-id4">D</span>
+            <span id="grade-id5">E</span>
+            <span id="grade-id6">F</span>
+            <span id="grade-id7">G</span>
+            <span id="grade-id8">小</span>
+            <span id="grade-id9">中</span>
+            <span id="grade-id10">高</span>
+            <span id="grade-id11">大</span>
+            <span id="grade-id12">シニア</span>
+            <span id="grade-id13">ねんりん</span>
+          </div>
+          <div class="tournament-place">場所：<%= tournament.place %></div>
+          <div class="tournament-result">
+            <a href="" class="tournament-link">結果</a>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="right-column column"></div>
+</div>
