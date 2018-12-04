@@ -1,58 +1,59 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>第</strong>
+  <strong>大会名:第</strong>
   <%= @tournament.number %>
   <strong>回</strong>
-</p>
-
-<p>
-  <strong>Name:</strong>
   <%= @tournament.name %>
 </p>
 
 <p>
-  <strong>Host:</strong>
+  <strong>主管:</strong>
   <%= @tournament.host %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>日付:</strong>
   <%= @tournament.date %>
 </p>
 
 <p>
-  <strong>Place:</strong>
+  <strong>メイン会場:</strong>
   <%= @tournament.place %>
 </p>
 
 <p>
-  <strong>Access:</strong>
+  <strong>第二会場:</strong>
   <%= @tournament.secondPlace %>
 </p>
 
 <p>
-  <strong>Grade:</strong>
+  <strong>開催地域:</strong>
+  <%= @tournament.district %>
+</p>
+
+<p>
+  <strong>級:</strong>
   <%= @tournament.grade %>
 </p>
 
 <p>
-  <strong>Entryfee:</strong>
+  <strong>参加費:</strong>
   <%= @tournament.entryFee %>
 </p>
 
 <p>
-  <strong>Applicationperiod:</strong>
+  <strong>参加申し込み締切:</strong>
   <%= @tournament.applicationPeriod %>
 </p>
 
 <p>
-  <strong>Capacity:</strong>
+  <strong>参加可能人数:</strong>
   <%= @tournament.capacity %>
 </p>
 
 <p>
-  <strong>Access:</strong>
+  <strong>アクセス:</strong>
   <%= @tournament.access %>
 </p>
 
@@ -61,6 +62,6 @@
   <%= @tournament.others %>
 </p>
 
-<%= link_to 'Edit', edit_tournament_path(@tournament) %>
+<%= link_to '編集', edit_tournament_path(@tournament) %>
 <%= link_to '削除', @tournament, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Back', tournaments_path %>
+<%= link_to '大会情報に戻る', tournaments_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_24_155845) do
+ActiveRecord::Schema.define(version: 2018_12_03_214220) do
 
   create_table "age_classes", force: :cascade do |t|
     t.string "name"
@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(version: 2018_11_24_155845) do
     t.integer "result_id"
     t.integer "karuta_id"
     t.integer "field_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "districts", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -164,6 +170,7 @@ ActiveRecord::Schema.define(version: 2018_11_24_155845) do
     t.string "secondPlace"
     t.text "others"
     t.string "number"
+    t.string "district"
   end
 
   create_table "users", force: :cascade do |t|

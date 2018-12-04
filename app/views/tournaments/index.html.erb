@@ -6,10 +6,63 @@
       <div class="refine-search">絞り込み検索</div>
       <div class="search-grade">
         <p>級</p>
-        <input type="text">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">A</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">B</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">C</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">D</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">E</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">F</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">G</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">小学生</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">中学生</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">高校生</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">大学生</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">シニア</span>
+          </label>
+          <label>
+            <input type="checkbox" class="area-input">
+            <span class="area-parts">ねんりん</span>
+          </label>
+        </div>
       </div>
       <div class="search-area">
-        <p>地域</p>
+        <p>開催地域</p>
         <div class="checkbox">
           <label>
             <input type="checkbox" class="area-input">
@@ -26,10 +79,6 @@
           <label>
             <input type="checkbox" class="area-input">
             <span class="area-parts">北陸</span>
-          </label>
-          <label>
-            <input type="checkbox" class="area-input">
-            <span class="area-parts">東海</span>
           </label>
           <label>
             <input type="checkbox" class="area-input">
@@ -71,18 +120,18 @@
         <div class="pst">></div>
       </div>
       <div class="month-list">
-          <div class="month" id="1">1月</div>
-          <div class="month" id="2">2月</div>
-          <div class="month" id="3">3月</div>
-          <div class="month" id="4">4月</div>
-          <div class="month" id="5">5月</div>
-          <div class="month" id="6">6月</div>
-          <div class="month" id="7">7月</div>
-          <div class="month" id="8">8月</div>
-          <div class="month" id="9">9月</div>
-          <div class="month" id="10">10月</div>
-          <div class="month" id="11">11月</div>
-          <div class="month" id="12">12月</div>
+        <div class="month" id="1">1月</div>
+        <div class="month" id="2">2月</div>
+        <div class="month" id="3">3月</div>
+        <div class="month" id="4">4月</div>
+        <div class="month" id="5">5月</div>
+        <div class="month" id="6">6月</div>
+        <div class="month" id="7">7月</div>
+        <div class="month" id="8">8月</div>
+        <div class="month" id="9">9月</div>
+        <div class="month" id="10">10月</div>
+        <div class="month" id="11">11月</div>
+        <div class="month active" id="12">12月</div>
       </div>
       <div class="containers">
       <% @tournaments.each do |tournament| %>

@@ -1,10 +1,9 @@
 .tournament-contents {
   max-width: 1200px;
+  margin-bottom: 30px;
   margin: 0 auto;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  height: 2000px;
+  display: table;
+  height: auto;
   padding: 0;
 }
 
@@ -14,20 +13,24 @@
 }
 
 .left-column {
-  width: 240px;
+  display: table-cell;
+  min-width: 240px;
 }
 
 .right-column {
-  width: 60px;
+  display: table-cell;
+  min-width: 60px;
 }
 
 .tournament-list-main {
+  display: table-cell;
   width: 100%;
   margin: 0 auto;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 20px;
+  background-color: #E0EBC9;
 }
 
 .search {
@@ -143,7 +146,7 @@ box-shadow: 0px 0px;
 }
 
 .tournament-list-size {
-  width: 70%;
+  min-width: 600px;
   margin: 0 auto;
 }
 
@@ -192,16 +195,17 @@ box-shadow: 0px 0px;
   width: 35px;
   margin: 5px;
   background-color: white;
-  border-bottom: solid 2px #07742F;
-  border-left: solid 2px white;
-  border-right: solid 2px white;
+  cursor: pointer;
+}
 
+.active {
+  border-bottom: solid 2px #07742F;
 }
 
 .tournament-list-size > .containers {
   display: inline-block;
   width: 100%;
-  border-top: solid 2px black;
+  border-top: solid 1px black;
   box-sizing: border-box;
   background-color: white;
 }
@@ -209,9 +213,9 @@ box-shadow: 0px 0px;
 .tournament-list-size > .containers > .container {
   display: inline-block;
   width: 100%;
-  border-left: solid 2px black;
-  border-bottom: solid 2px black;
-  border-right: solid 2px black;
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+  border-right: solid 1px black;
   box-sizing: border-box;
   padding: 5px;
 }

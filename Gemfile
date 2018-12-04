@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.3'
 
 gem 'devise'
+gem 'jquery-rails' 
+gem 'jquery-ui-rails'
 
 gem 'simple_calendar', '~> 2.0'
 
