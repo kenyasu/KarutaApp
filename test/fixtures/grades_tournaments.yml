@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  result: one
-  karuta: one
+  grades: one
+  tournament: one
 
 two:
-  result: two
-  karuta: two
+  grades: two
+  tournament: two

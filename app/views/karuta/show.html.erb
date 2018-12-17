@@ -1,9 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Waka:</strong>
+  <strong>百人一首　-</strong>
+  <%= @karutum.id %>
+  <strong>番-</strong>
+</p>
+<p>
+  <strong>和歌:</strong>
+  <%= @karutum.waka_kanji %>
+</p>
+<p>
+  <strong>ひらがな:</strong>
   <%= @karutum.waka %>
 </p>
 
-<%= link_to 'Edit', edit_karutum_path(@karutum) %> |
-<%= link_to 'Back', karuta_path %>
+<div class="btn"><%= link_to '編集', edit_karutum_path(@karutum) %></div> |
+<div class="btn"><%= link_to '追加で登録する', new_karutum_path %></div> |
+<div class="btn"><%= link_to '和歌一覧に戻る', karuta_path %></div>

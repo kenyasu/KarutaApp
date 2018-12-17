@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :jokers
+  resources :avoidances
+  resources :otetsukis
+  resources :criticals
+  resources :grades_tournaments
   resources :districts
   resources :hands
   resources :genders
@@ -10,10 +15,6 @@ Rails.application.routes.draw do
   resources :game_types
   resources :fields
   resources :karuta
-  resources :otetsukis
-  resources :criticals
-  resources :jokers
-  resources :avoidances
   resources :opponents
   resources :results
   resources :tournaments

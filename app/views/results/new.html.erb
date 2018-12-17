@@ -1,5 +1,11 @@
-<h1>New Result</h1>
+<div class="result-input-contents contents">
+  <div class="column"></div>
+  <div class="result-input-main main">
+    <h1>試合結果入力（*がついている項目は入力必須項目）</h1>
 
-<%= render 'form', result: @result %>
+    <%= render 'form', result: @result %>
 
-<%= link_to 'Back', results_path %>
+    <%= link_to 'Back', results_path %>
+  </div>
+  <div class="right-column column"></div>
+</div>

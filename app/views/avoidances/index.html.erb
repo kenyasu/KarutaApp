@@ -14,8 +14,8 @@
   <tbody>
     <% @avoidances.each do |avoidance| %>
       <tr>
-        <td><%= avoidance.result_id %></td>
-        <td><%= avoidance.karuta_id %></td>
+        <td><%= avoidance.result %></td>
+        <td><%= avoidance.karuta %></td>
         <td><%= link_to 'Show', avoidance %></td>
         <td><%= link_to 'Edit', edit_avoidance_path(avoidance) %></td>
         <td><%= link_to 'Destroy', avoidance, method: :delete, data: { confirm: 'Are you sure?' } %></td>

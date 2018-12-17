@@ -10,73 +10,322 @@
       </ul>
     </div>
   <% end %>
+  <div class="input-form">
+    <div class="result-input-container result-main">
+      <h2>試合結果</h2>
+      <div class="field">
+        <p>練習／大会／指導(*)</p>
+        <div class="game-type-radio radio">
+          <input type="radio" name="game-type" class="game-type-input" id="rensyuu" value="1">
+          <label for="rensyuu">練習</label>
+          <input type="radio" name="game-type" class="game-type-input" id="taikai" value="2">
+          <label for="taikai">大会</label>
+          <input type="radio" name="game-type" class="game-type-input" id="shidou" value="3">
+          <label for="shidou">指導</label>
+        </div>
+        <div class="sub-field taikai-names" id="inputtaikai">
+          <p>大会名</p>
+          <select name="taikai" id="" class="taikai-name">
+            <option value="" hidden>予定表に登録している大会名を選択</option>
+            <option value="1">広島大会</option>
+            <option value="2">吉野会大会</option>
+          </select>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
-  </div>
+      <div class="field">
+        <p>日付(*)</p>
+        <div><%= form.date_select :date %></div>
+      </div>
 
-  <div class="field">
-    <%= form.label :gameType_id %>
-    <%= form.number_field :gameType_id %>
-  </div>
+      <div class="field">
+        <p>場所</p>
+        <input type="text" value="※大会名が選択されたら自動入力される">
+      </div>
 
-  <div class="field">
-    <%= form.label :gameCount_id %>
-    <%= form.number_field :gameCount_id %>
-  </div>
+      <div class="field">
+        <p>何試合目か</p>
+        <select name="game-count" id="" class="game-count">
+          <option value="1">１試合目</option>
+          <option value="2">２試合目</option>
+          <option value="3">３試合目</option>
+          <option value="4">４試合目</option>
+          <option value="5">５試合目</option>
+          <option value="6">６試合目</option>
+          <option value="7">７試合目</option>
+          <option value="8">８試合目</option>
+          <option value="9">９試合目</option>
+        </select>
+      </div>
 
-  <div class="field">
-    <%= form.label :opponent_id %>
-    <%= form.number_field :opponent_id %>
-  </div>
+      <div class="field">
+        <p>勝敗(*)</p>
+        <div class="win-lose-radio radio">
+          <input type="radio" name="win-lose" class="win-lose-input" id="win">
+          <label for="win">勝ち</label>
+          <input type="radio" name="win-lose" class="win-lose-input" id="lose">
+          <label for="lose">負け</label>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :cardDifference %>
-    <%= form.number_field :cardDifference %>
-  </div>
+      <div class="field">
+        <p>何枚差か</p>
+        <select name="card-difference" id="" class="difference">
+          <option value="1">1枚差</option>
+          <option value="2">2枚差</option>
+          <option value="3">3枚差</option>
+          <option value="4">4枚差</option>
+          <option value="5">5枚差</option>
+          <option value="6">6枚差</option>
+          <option value="7">7枚差</option>
+          <option value="8">8枚差</option>
+          <option value="9">9枚差</option>
+          <option value="10">10枚差</option>
+          <option value="11">11枚差</option>
+          <option value="12">12枚差</option>
+          <option value="13">13枚差</option>
+          <option value="14">14枚差</option>
+          <option value="15">15枚差</option>
+          <option value="16">16枚差</option>
+          <option value="17">17枚差</option>
+          <option value="18">18枚差</option>
+          <option value="19">19枚差</option>
+          <option value="20">20枚差</option>
+          <option value="21">21枚差</option>
+          <option value="22">22枚差</option>
+          <option value="23">23枚差</option>
+          <option value="24">24枚差</option>
+          <option value="25">25枚差</option>
+          <option value="26">26枚差</option>
+          <option value="27">27枚差</option>
+          <option value="28">28枚差</option>
+          <option value="29">29枚差</option>
+          <option value="30">30枚差</option>
+        </select>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_area :comment %>
-  </div>
+    <div class="result-input-container result-detail">
+      <h2>試合結果詳細</h2>
+      <div class="field otetsuki">
+        <p>お手つき回数</p>
+        <select name="otetsuki" id="" class="ote">
+          <option value="0">0枚</option>
+          <option value="1">1枚</option>
+          <option value="2">2枚</option>
+          <option value="3">3枚</option>
+          <option value="4">4枚</option>
+          <option value="5">5枚</option>
+          <option value="6">6枚</option>
+          <option value="7">7枚</option>
+          <option value="8">8枚</option>
+          <option value="9">9枚</option>
+          <option value="10">10枚</option>
+        </select>
+        <div class="sub-field 1 2 3 4 5 6 7 8 9 10">
+          <p>1枚目</p>
+          <select name="karuta-ote1" id="" class="karuta-ote">
+            <option value="" hidden>札を選ぶ</option>
+            <option value="1">あきの</option>
+            <option value="2">はるす</option>
+            <option value="3">あし</option>
+            <option value="4">たご</option>
+            <option value="5">おく</option>
+            <option value="6">かさ</option>
+            <option value="7">あまの</option>
+            <option value="8">わがい</option>
+            <option value="9">はなの</option>
+            <option value="10">これ</option>
+          </select>
+        </div>
+        <div class="sub-field 2 3 4 5 6 7 8 9 10">
+          <p>2枚目</p>
+          <select name="karuta-ote2" id="" class="karuta-ote">
+            <option value="" hidden>札を選ぶ</option>
+            <option value="1">あきの</option>
+            <option value="2">はるす</option>
+            <option value="3">あし</option>
+            <option value="4">たご</option>
+            <option value="5">おく</option>
+            <option value="6">かさ</option>
+            <option value="7">あまの</option>
+            <option value="8">わがい</option>
+            <option value="9">はなの</option>
+            <option value="10">これ</option>
+          </select>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :discussionOpp %>
-    <%= form.number_field :discussionOpp %>
-  </div>
+      <div class="field discussion-self">
+        <p>もめ回数（自分から）</p>
+        <select name="discussion-self" id="" class="momeself">
+          <option value="0">0回</option>
+          <option value="1">1回</option>
+          <option value="2">2回</option>
+          <option value="3">3回</option>
+          <option value="4">4回</option>
+          <option value="5">5回</option>
+          <option value="6">6回</option>
+          <option value="7">7回</option>
+          <option value="8">8回</option>
+          <option value="9">9回</option>
+          <option value="10">10回</option>
+        </select>
+      </div>
 
-  <div class="field">
-    <%= form.label :discussionSelf %>
-    <%= form.number_field :discussionSelf %>
-  </div>
+      <div class="field discussion-opp">
+        <p>もめ回数（相手から）</p>
+        <select name="discussion-opp" id="" class="momeaite">
+          <option value="0">0回</option>
+          <option value="1">1回</option>
+          <option value="2">2回</option>
+          <option value="3">3回</option>
+          <option value="4">4回</option>
+          <option value="5">5回</option>
+          <option value="6">6回</option>
+          <option value="7">7回</option>
+          <option value="8">8回</option>
+          <option value="9">9回</option>
+          <option value="10">10回</option>
+        </select>
+      </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
-  </div>
+      <div class="field critical">
+        <p>うまく取れた札（枚数）</p>
+        <select name="critical" id="" class="cri">
+          <option value="0">0枚</option>
+          <option value="1">1枚</option>
+          <option value="2">2枚</option>
+          <option value="3">3枚</option>
+          <option value="4">4枚</option>
+          <option value="5">5枚</option>
+          <option value="6">6枚</option>
+          <option value="7">7枚</option>
+          <option value="8">8枚</option>
+          <option value="9">9枚</option>
+          <option value="10">10枚</option>
+        </select>
+      </div>
 
-  <div class="field">
-    <%= form.label :critical_id %>
-    <%= form.number_field :critical_id %>
-  </div>
+      <div class="field avoidance">
+        <p>うまく避けれた札（枚数）</p>
+        <select name="avoidance" id="" class="avoid">
+          <option value="0">0枚</option>
+          <option value="1">1枚</option>
+          <option value="2">2枚</option>
+          <option value="3">3枚</option>
+          <option value="4">4枚</option>
+          <option value="5">5枚</option>
+          <option value="6">6枚</option>
+          <option value="7">7枚</option>
+          <option value="8">8枚</option>
+          <option value="9">9枚</option>
+          <option value="10">10枚</option>
+        </select>
+      </div>
 
-  <div class="field">
-    <%= form.label :avoidance_id %>
-    <%= form.number_field :avoidance_id %>
-  </div>
+      <div class="field joker">
+        <p>ばば（運命戦の場合）</p>
+        <select name="karuta-joker" id="" class="karuta-joker">
+          <option value="" hidden>札を選ぶ</option>
+          <option value="1">あきの</option>
+          <option value="2">はるす</option>
+          <option value="3">あし</option>
+          <option value="4">たご</option>
+          <option value="5">おく</option>
+          <option value="6">かさ</option>
+          <option value="7">あまの</option>
+          <option value="8">わがい</option>
+          <option value="9">はなの</option>
+          <option value="10">これ</option>
+        </select>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :otetsuki_id %>
-    <%= form.number_field :otetsuki_id %>
-  </div>
+    <div class="result-input-container result-opp">
+      <h2>対戦相手情報</h2>
+      <div class="field">
+        <p>相手のID（もしあれば）</p>
+        <div><%= form.number_field :opponent_id %></div>
+      </div>
 
-  <div class="field">
-    <%= form.label :joker_id %>
-    <%= form.number_field :joker_id %>
-  </div>
+      <div class="field">
+        <p>名前</p>
+        <div><%= form.number_field :opponent_id %></div>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
+      <div class="field">
+        <p>性別</p>
+        <div class="gender-radio radio">
+          <input type="radio" name="gender" class="gender-input" id="male">
+          <label for="male">男</label>
+          <input type="radio" name="gender" class="gender-input" id="female">
+          <label for="female">女</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <p>級</p>
+        <div class="grade-radio radio">
+          <input type="radio" name="grade" class="grade-input" id="aaa">
+          <label for="aaa">A</label>
+          <input type="radio" name="grade" class="grade-input" id="bbb">
+          <label for="bbb">B</label>
+          <input type="radio" name="grade" class="grade-input" id="ccc">
+          <label for="aaa">C</label>
+          <input type="radio" name="grade" class="grade-input" id="ddd">
+          <label for="ddd">D</label>
+          <input type="radio" name="grade" class="grade-input" id="eee">
+          <label for="eee">E</label>
+          <input type="radio" name="grade" class="grade-input" id="fff">
+          <label for="fff">F</label>
+          <input type="radio" name="grade" class="grade-input" id="ggg">
+          <label for="ggg">G</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <p>利き腕</p>
+        <div class="hand-radio radio">
+          <input type="radio" name="hand" class="hand-input" id="right">
+          <label for="right">右</label>
+          <input type="radio" name="hand" class="hand-input" id="left">
+          <label for="left">左</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <p>所属</p>
+        <div><%= form.number_field :opponent_id %></div>
+      </div>
+
+      <div class="field">
+        <p>かるたスタイル</p>
+        <div class="style-radio radio">
+          <input type="radio" name="style" class="style-input" id="offence">
+          <label for="offence">攻め</label>
+          <input type="radio" name="style" class="style-input" id="defence">
+          <label for="defence">守り</label>
+          <input type="radio" name="style" class="style-input" id="ballance">
+          <label for="ballance">バランス</label>
+          <input type="radio" name="style" class="style-input" id="other">
+          <label for="other">その他</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-input-container comment">
+      <h2>気づいたこと・指導内容・反省など（自由に）</h2>
+      <div><%= form.text_area :comment %></div>
+    </div>
+
+    <div class="search-btn btn">
+      <%= link_to '入力完了', new_tournament_path %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+
   </div>
 <% end %>

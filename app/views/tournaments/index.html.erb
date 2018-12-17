@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="tournament-contents">
+<div class="tournament-contents contents">
   <div class="left-column column">
     <div class="search">
       <div class="refine-search">絞り込み検索</div>
@@ -109,7 +109,7 @@
       <div class="search-btn btn">検索</div>
     </div>
   </div>
-  <div class="tournament-list-main">
+  <div class="tournament-list-main main">
     <div class="tournament-list-size">
       <div class="tournament-new">
         <%= link_to '新規登録', new_tournament_path %>
@@ -120,22 +120,22 @@
         <div class="pst">></div>
       </div>
       <div class="month-list">
-        <div class="month" id="1">1月</div>
-        <div class="month" id="2">2月</div>
-        <div class="month" id="3">3月</div>
-        <div class="month" id="4">4月</div>
-        <div class="month" id="5">5月</div>
-        <div class="month" id="6">6月</div>
-        <div class="month" id="7">7月</div>
-        <div class="month" id="8">8月</div>
-        <div class="month" id="9">9月</div>
-        <div class="month" id="10">10月</div>
-        <div class="month" id="11">11月</div>
-        <div class="month active" id="12">12月</div>
+        <div>1月</div>
+        <div>2月</div>
+        <div>3月</div>
+        <div>4月</div>
+        <div>5月</div>
+        <div>6月</div>
+        <div>7月</div>
+        <div>8月</div>
+        <div>9月</div>
+        <div>10月</div>
+        <div>11月</div>
+        <div class="active-m">12月</div>
       </div>
       <div class="containers">
       <% @tournaments.each do |tournament| %>
-        <div class="container">
+        <div class="container" id=<%=tournament.date.month%>>
           <div class="tournament-date">
             <%= tournament.date.month %>/<%= tournament.date.day %>
           </div>

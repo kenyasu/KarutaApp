@@ -15,9 +15,9 @@
   <tbody>
     <% @otetsukis.each do |otetsuki| %>
       <tr>
-        <td><%= otetsuki.result_id %></td>
-        <td><%= otetsuki.karuta_id %></td>
-        <td><%= otetsuki.field_id %></td>
+        <td><%= otetsuki.result %></td>
+        <td><%= otetsuki.karuta %></td>
+        <td><%= otetsuki.field %></td>
         <td><%= link_to 'Show', otetsuki %></td>
         <td><%= link_to 'Edit', edit_otetsuki_path(otetsuki) %></td>
         <td><%= link_to 'Destroy', otetsuki, method: :delete, data: { confirm: 'Are you sure?' } %></td>

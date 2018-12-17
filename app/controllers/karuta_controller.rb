@@ -69,6 +69,6 @@ class KarutaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def karutum_params
-      params.require(:karutum).permit(:waka)
+      params.require(:karutum).permit(:waka, :waka_kanji)
     end
 end

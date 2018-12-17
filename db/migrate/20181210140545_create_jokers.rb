@@ -1,8 +1,8 @@
 class CreateJokers < ActiveRecord::Migration[5.2]
   def change
     create_table :jokers do |t|
-      t.integer :result_id
-      t.integer :karuta_id
+      t.references :result, foreign_key: true
+      t.references :karuta, foreign_key: true
 
       t.timestamps
     end

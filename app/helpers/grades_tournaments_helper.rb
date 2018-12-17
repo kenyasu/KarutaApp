@@ -1,0 +1,2 @@
+module GradesTournamentsHelper
+end

@@ -14,8 +14,8 @@
   <tbody>
     <% @jokers.each do |joker| %>
       <tr>
-        <td><%= joker.result_id %></td>
-        <td><%= joker.karuta_id %></td>
+        <td><%= joker.result %></td>
+        <td><%= joker.karuta %></td>
         <td><%= link_to 'Show', joker %></td>
         <td><%= link_to 'Edit', edit_joker_path(joker) %></td>
         <td><%= link_to 'Destroy', joker, method: :delete, data: { confirm: 'Are you sure?' } %></td>

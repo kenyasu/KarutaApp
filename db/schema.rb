@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_03_214220) do
+ActiveRecord::Schema.define(version: 2018_12_11_210201) do
 
   create_table "age_classes", force: :cascade do |t|
     t.string "name"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2018_12_03_214220) do
     t.integer "karuta_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["karuta_id"], name: "index_avoidances_on_karuta_id"
+    t.index ["result_id"], name: "index_avoidances_on_result_id"
   end
 
   create_table "criticals", force: :cascade do |t|
@@ -37,6 +39,9 @@ ActiveRecord::Schema.define(version: 2018_12_03_214220) do
     t.integer "field_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["field_id"], name: "index_criticals_on_field_id"
+    t.index ["karuta_id"], name: "index_criticals_on_karuta_id"
+    t.index ["result_id"], name: "index_criticals_on_result_id"
   end
 
   create_table "districts", force: :cascade do |t|
@@ -75,6 +80,15 @@ ActiveRecord::Schema.define(version: 2018_12_03_214220) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "grades_tournaments", force: :cascade do |t|
+    t.integer "grades_id"
+    t.integer "tournament_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["grades_id"], name: "index_grades_tournaments_on_grades_id"
+    t.index ["tournament_id"], name: "index_grades_tournaments_on_tournament_id"
+  end
+
   create_table "hands", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -86,12 +100,15 @@ ActiveRecord::Schema.define(version: 2018_12_03_214220) do
     t.integer "karuta_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["karuta_id"], name: "index_jokers_on_karuta_id"
+    t.index ["result_id"], name: "index_jokers_on_result_id"
   end
 
   create_table "karuta", force: :cascade do |t|
     t.string "waka"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "waka_kanji"
   end
 
   create_table "opponents", force: :cascade do |t|
@@ -113,6 +130,9 @@ ActiveRecord::Schema.define(version: 2018_12_03_214220) do
     t.integer "field_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["field_id"], name: "index_otetsukis_on_field_id"
+    t.index ["karuta_id"], name: "index_otetsukis_on_karuta_id"
+    t.index ["result_id"], name: "index_otetsukis_on_result_id"
   end
 
   create_table "results", force: :cascade do |t|

@@ -1,69 +1,84 @@
 <p id="notice"><%= notice %></p>
+<div class="result-show-contents contents">
+  <div class="column"></div>
+  <div class="result-show-main main">
+    <div class="result-show">
+      <div class="result-show-container">
+        <h2><%= @result.date.month %>月<%= @result.date.day %>日　<%= @result.gameCount_id %>試合目の試合結果</h2>
+        <p>
+          <strong>Date:</strong>
+          <%= @result.date %>
+        </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @result.date %>
-</p>
+        <p>
+          <strong>Gametype:</strong>
+          <%= @result.gameType_id %>
+        </p>
 
-<p>
-  <strong>Gametype:</strong>
-  <%= @result.gameType_id %>
-</p>
+        <p>
+          <strong>Gamecount:</strong>
+          <%= @result.gameCount_id %>
+        </p>
 
-<p>
-  <strong>Gamecount:</strong>
-  <%= @result.gameCount_id %>
-</p>
+        <p>
+          <strong>勝敗:</strong>
+          <%= @result.cardDifference %>
+        </p>
 
-<p>
-  <strong>Opponent:</strong>
-  <%= @result.opponent_id %>
-</p>
+        <p>
+          <strong>枚差:</strong>
+          <%= @result.cardDifference %>
+        </p>
 
-<p>
-  <strong>Carddifference:</strong>
-  <%= @result.cardDifference %>
-</p>
+      </div>
+    </div>
 
-<p>
-  <strong>Comment:</strong>
-  <%= @result.comment %>
-</p>
+    <p>
+      <strong>Opponent:</strong>
+      <%= @result.opponent_id %>
+    </p>
 
-<p>
-  <strong>Discussionopp:</strong>
-  <%= @result.discussionOpp %>
-</p>
+    <p>
+      <strong>Comment:</strong>
+      <%= @result.comment %>
+    </p>
 
-<p>
-  <strong>Discussionself:</strong>
-  <%= @result.discussionSelf %>
-</p>
+    <p>
+      <strong>Discussionopp:</strong>
+      <%= @result.discussionOpp %>
+    </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @result.user_id %>
-</p>
+    <p>
+      <strong>Discussionself:</strong>
+      <%= @result.discussionSelf %>
+    </p>
 
-<p>
-  <strong>Critical:</strong>
-  <%= @result.critical_id %>
-</p>
+    <p>
+      <strong>User:</strong>
+      <%= @result.user_id %>
+    </p>
 
-<p>
-  <strong>Avoidance:</strong>
-  <%= @result.avoidance_id %>
-</p>
+    <p>
+      <strong>Critical:</strong>
+      <%= @result.critical_id %>
+    </p>
 
-<p>
-  <strong>Otetsuki:</strong>
-  <%= @result.otetsuki_id %>
-</p>
+    <p>
+      <strong>Avoidance:</strong>
+      <%= @result.avoidance_id %>
+    </p>
 
-<p>
-  <strong>Joker:</strong>
-  <%= @result.joker_id %>
-</p>
+    <p>
+      <strong>Otetsuki:</strong>
+      <%= @result.otetsuki_id %>
+    </p>
+
+    <p>
+      <strong>Joker:</strong>
+      <%= @result.joker_id %>
+    </p>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_result_path(@result) %> |
 <%= link_to 'Back', results_path %>

@@ -15,9 +15,9 @@
   <tbody>
     <% @criticals.each do |critical| %>
       <tr>
-        <td><%= critical.result_id %></td>
-        <td><%= critical.karuta_id %></td>
-        <td><%= critical.field_id %></td>
+        <td><%= critical.result %></td>
+        <td><%= critical.karuta %></td>
+        <td><%= critical.field %></td>
         <td><%= link_to 'Show', critical %></td>
         <td><%= link_to 'Edit', edit_critical_path(critical) %></td>
         <td><%= link_to 'Destroy', critical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
